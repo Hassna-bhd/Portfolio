@@ -1,0 +1,878 @@
+/* =========================
+   BODY
+========================= */
+
+body{
+
+  margin:0;
+
+  background:#020617;
+
+  color:white;
+
+  font-family:Poppins;
+
+  overflow-x:hidden;
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.lux-loader{
+
+  position:fixed;
+
+  inset:0;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:
+  radial-gradient(
+    circle at top,
+    #111827,
+    #020617 70%
+  );
+
+  overflow:hidden;
+
+  z-index:9999;
+}
+
+/* =========================
+   PARTICLES
+========================= */
+
+.particles{
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+  radial-gradient(
+    rgba(255,255,255,.15) 1px,
+    transparent 1px
+  );
+
+  background-size:80px 80px;
+
+  opacity:.2;
+
+  animation:
+  particlesMove 20s linear infinite;
+}
+
+@keyframes particlesMove{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-80px);
+  }
+}
+
+/* =========================
+   LOGO WRAPPER
+========================= */
+
+.logo-wrapper{
+
+  position:relative;
+
+  width:180px;
+
+  height:180px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+  animation:
+  floatLogo 4s ease-in-out infinite;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.logo-image{
+
+  width:100px;
+
+  height:100px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  box-shadow:
+  0 0 40px
+  rgba(139,92,246,.5);
+  position: absolute;
+  z-index:2;
+}
+
+@keyframes floatLogo{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* =========================
+   CIRCLE LOADER
+========================= */
+
+.loading-circle{
+  position:absolute;
+  width:125px;
+  height:125px;
+  transform:rotate(-90deg);
+  z-index:1;
+}
+
+/* BACKGROUND */
+
+.circle-bg{
+
+  fill:none;
+
+  stroke:
+  rgba(255,255,255,.1);
+
+  stroke-width:4;
+}
+
+/* LOADER */
+
+.circle-loader{
+
+  fill:none;
+
+  stroke:#ffffff;
+
+  stroke-width:5;
+
+  stroke-linecap:round;
+
+  stroke-dasharray:754;
+
+  stroke-dashoffset:754;
+
+  filter:
+  drop-shadow(
+    0 0 10px white
+  );
+
+  animation:
+  drawCircle 5s linear forwards,
+  glowCircle 2s ease-in-out infinite;
+}
+
+/* DRAW */
+
+@keyframes drawCircle{
+
+  to{
+    stroke-dashoffset:0;
+  }
+}
+
+/* GLOW */
+
+@keyframes glowCircle{
+
+  0%{
+
+    filter:
+    drop-shadow(
+      0 0 8px white
+    );
+  }
+
+  50%{
+
+    filter:
+    drop-shadow(
+      0 0 20px white
+    );
+  }
+
+  100%{
+
+    filter:
+    drop-shadow(
+      0 0 8px white
+    );
+  }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+  position:fixed;
+
+  width:100%;
+
+  top:0;
+
+  left:0;
+
+  z-index:10;
+   display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding:18px 40px;
+
+  backdrop-filter:blur(12px);
+
+  background:
+  rgba(2,6,23,.45);
+}
+.navbar-brand{
+
+  display:flex;
+
+  align-items:center;
+
+  margin:0;
+}
+
+.navbar-nav{
+
+  display:flex;
+
+  align-items:center;
+}
+/* NAVBAR LOGO */
+
+.navbar-logo{
+
+  width:32px;
+
+  height:32px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  box-shadow:
+  0 0 15px
+  rgba(255,255,255,.35);
+}
+
+/* LINKS */
+
+.nav-link{
+  color:white !important;
+  position: relative;
+  transition:.3s;
+}
+
+.nav-link:hover{
+  transform:
+  translateY(-3px);
+  text-shadow:
+  0 0 8px rgba(56,189,248,.9),
+  0 0 18px rgba(139,92,246,.7),
+  0 0 28px rgba(56,189,248,.6);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link:active::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:12px;
+
+  bottom:0;
+
+  width:70%;
+
+  height:2px;
+
+  background:#38bdf8;
+
+  box-shadow:
+  0 0 10px #38bdf8;
+}
+.nav-link:active {
+  color:#38bdf8 !important;
+  box-shadow: 0 0 12px 11px white;
+  text-shadow:
+  0 0 10px rgba(56,189,248,1);
+
+  font-weight:600;
+}
+/* HERO */
+
+.hero-title{
+
+  line-height:1.1;
+
+  text-shadow:
+  0 0 20px
+  rgba(56,189,248,.5);
+}
+/* SPACE UNDER NAVBAR */
+
+.container.min-vh-100{
+
+  padding-top:140px;
+}
+.navbar{
+
+  backdrop-filter:blur(12px);
+
+  background:
+  rgba(2,6,23,.45) !important;
+}
+/* =========================
+   FINAL LOGO ANIMATION
+========================= */
+
+.logo-finish{
+  animation:
+  flyNavbar 3s
+  cubic-bezier(.77,0,.18,1)
+  forwards;
+   transform-origin:center;
+}
+
+/* LOGO FLIES TO NAVBAR */
+@keyframes flyNavbar{
+
+  0%{
+
+    transform:
+    translate(0,0)
+    scale(1);
+
+    opacity:1;
+  }
+
+  25%{
+
+    transform:
+    translate(-60px,-40px)
+    scale(.92);
+  }
+
+  50%{
+
+    transform:
+    translate(-180px,-120px)
+    scale(.75);
+  }
+
+  75%{
+
+    transform:
+    translate(-360px,-220px)
+    scale(.45);
+  }
+
+  100%{
+
+    transform:
+    translate(-520px,-320px)
+    scale(.22);
+
+    opacity:0;
+  }
+}
+
+
+/* SMOOTH APP APPEAR */
+
+.container,
+.navbar,
+section,
+footer{
+
+  animation:
+  appFade 1.5s ease;
+}
+
+@keyframes appFade{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(20px);
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+  }
+}
+
+/* GLASS EFFECT */
+
+.glass-card{
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid
+  rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(20px);
+
+  border-radius:30px;
+
+  box-shadow:
+  0 10px 40px
+  rgba(0,0,0,0.4);
+
+  transition:.4s;
+}
+
+.glass-card:hover{
+
+  transform:
+  translateY(-10px);
+}
+
+/* CARDS */
+
+.skill-card,
+.project-card,
+.about-card{
+
+  background:#111827;
+
+  padding:35px;
+
+  border-radius:24px;
+
+  transition:.4s;
+}
+
+.skill-card:hover,
+.project-card:hover{
+
+  transform:
+  translateY(-10px);
+
+  background:#1e293b;
+}
+
+/* CONTACT */
+
+.contact-form{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+
+  max-width:700px;
+
+  margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+  padding:18px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:#111827;
+
+  color:white;
+}
+
+textarea{
+
+  min-height:180px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+
+  font-size:48px;
+
+  font-weight:bold;
+
+  margin-bottom:50px;
+}
+
+/* BUTTON */
+
+.btn-info{
+
+  background:
+  linear-gradient(
+    135deg,
+    #38bdf8,
+    #8b5cf6
+  );
+
+  border:none;
+
+  color:white;
+
+  font-weight:bold;
+
+  transition:.4s;
+}
+
+.btn-info:hover{
+
+  transform:
+  translateY(-3px);
+
+  box-shadow:
+  0 10px 25px
+  rgba(139,92,246,.5);
+}
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-btn{
+
+  position:fixed;
+
+  top:82px;
+
+  right:30px;
+
+  z-index:1200;
+
+  border-radius:30px;
+
+  padding:10px 22px;
+
+  backdrop-filter:blur(10px);
+
+  background:
+  rgba(255,255,255,.05);
+
+  border:
+  1px solid
+  rgba(255,255,255,.15);
+
+  transition:.4s;
+}
+
+.theme-btn:hover{
+
+  transform:
+  translateY(-3px);
+
+  background:
+  rgba(255,255,255,.12);
+
+  box-shadow:
+  0 10px 25px
+  rgba(139,92,246,.35);
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* LARGE LAPTOPS */
+
+@media(max-width:1200px){
+
+  .hero-title{
+    font-size:70px;
+  }
+
+  .logo-finish{
+    transform:scale(.9);
+  }
+}
+
+/* TABLETS */
+
+@media(max-width:992px){
+
+  /* NAVBAR */
+
+  .navbar{
+    padding:20px 30px !important;
+  }
+
+  .navbar-nav{
+    gap:18px !important;
+  }
+
+  /* HERO */
+
+  .container.min-vh-100{
+    padding-top:160px;
+  }
+
+  .hero-title{
+    font-size:58px;
+    text-align:center;
+  }
+
+  .text-info,
+  .text-secondary{
+    text-align:center;
+  }
+
+  .glass-card{
+    margin-top:40px;
+  }
+
+  /* BUTTON */
+
+  .btn-info{
+    width:100%;
+  }
+
+  /* SECTION */
+
+  .section-title{
+    text-align:center;
+  }
+
+  /* CARDS */
+
+  .skill-card,
+  .project-card{
+    margin-bottom:20px;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  /* NAVBAR */
+
+  .navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:20px !important;
+  }
+
+  .navbar-nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:14px !important;
+  }
+
+  .navbar-logo{
+
+    width:28px;
+    height:28px;
+  }
+
+  /* HERO */
+
+  .container.min-vh-100{
+    padding-top:190px;
+  }
+
+  .hero-title{
+
+    font-size:44px;
+
+    line-height:1.2;
+  }
+
+  .display-2{
+    font-size:44px !important;
+  }
+
+  .glass-card{
+
+    padding:30px !important;
+  }
+
+  /* LOADER */
+
+  .logo-wrapper{
+
+    width:160px;
+    height:160px;
+  }
+
+  .logo-image{
+
+    width:80px;
+    height:80px;
+  }
+
+  .loading-circle{
+
+    width:110px;
+    height:110px;
+  }
+
+  /* TITLES */
+
+  .section-title{
+
+    font-size:36px;
+  }
+
+  /* CONTACT */
+
+  .contact-form input,
+  .contact-form textarea{
+
+    padding:15px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:576px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* NAVBAR */
+
+  .navbar{
+
+    padding:15px !important;
+  }
+
+  .nav-link{
+
+    font-size:14px;
+  }
+
+  /* HERO */
+
+  .hero-title{
+
+    font-size:34px;
+  }
+
+  .display-2{
+
+    font-size:34px !important;
+  }
+
+  .text-secondary{
+
+    font-size:15px !important;
+  }
+
+  .container{
+
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+
+  /* CARDS */
+
+  .glass-card,
+  .skill-card,
+  .project-card,
+  .about-card{
+
+    padding:22px !important;
+
+    border-radius:20px;
+  }
+
+  /* SECTION TITLE */
+
+  .section-title{
+
+    font-size:30px;
+
+    margin-bottom:35px;
+  }
+
+  /* BUTTON */
+
+  .btn-info{
+
+    width:100%;
+  }
+
+  /* FOOTER */
+
+  footer{
+
+    padding:25px 15px;
+  }
+}
+
+/* EXTRA SMALL */
+
+@media(max-width:400px){
+
+  .hero-title{
+    font-size:28px;
+  }
+
+  .display-2{
+    font-size:28px !important;
+  }
+
+  .section-title{
+    font-size:25px;
+  }
+
+  .navbar-nav{
+    gap:10px !important;
+  }
+
+  .nav-link{
+    font-size:13px;
+  }
+
+  .logo-image{
+    width:65px;
+    height:65px;
+  }
+
+  .loading-circle{
+    width:95px;
+    height:95px;
+  }
+}
