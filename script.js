@@ -30,7 +30,7 @@ function Loader({loaded}) {
 
         {/* IMAGE */}
         <img
-          src="https://i.imgur.com/2pPwY9W.png"
+          src="./Logo.png"
           alt="HB Logo"
           className="logo-image"
         />
@@ -66,8 +66,8 @@ React.useState(true);
       >
 
         <img
-          src="https://i.imgur.com/2pPwY9W.png"
-          className="navbar-logo"
+        src="./Logo.png"
+        className="navbar-logo"
         />
 
       </a>
