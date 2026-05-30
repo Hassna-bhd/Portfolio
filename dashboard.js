@@ -89,5 +89,13 @@ function renderProjects() {
   });
 
 }
+function logout(){
 
+  localStorage.removeItem(
+    "isAdmin"
+  );
+
+  window.location.href =
+    "login.html";
+}
 renderProjects();
