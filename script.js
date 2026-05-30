@@ -454,14 +454,14 @@ function App() {
 
       setLoaded(true);
 
-    }, 1200);
+    }, 1000);
 
     // disparition loader
     setTimeout(() => {
 
       setLoading(false);
 
-    }, 2000);
+    }, 1000);
 
   }, []);
 
