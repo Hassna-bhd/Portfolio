@@ -1,3 +1,4 @@
+let editIndex = null;
 if(
   localStorage.getItem("isAdmin")
   !== "true"
