@@ -108,10 +108,9 @@ React.useState(true);
           <li class="nav-item">
   <a
     class="nav-link"
-    href="dashboard.html"
-  >
-    Dashboard
-  </a>
+    href="login.html">
+  Admin
+</a>
 </li>
         </ul>
         
