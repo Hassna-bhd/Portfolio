@@ -30,28 +30,42 @@ function saveProjects(projects) {
 
 }
 
-function addProject() {
+function addProject(){
 
   const title =
-    document.getElementById("title").value;
+  document.getElementById("title").value;
 
   const desc =
-    document.getElementById("desc").value;
+  document.getElementById("desc").value;
+
+  const tech =
+  document.getElementById("tech").value;
+
+  const image =
+  document.getElementById("image").value;
+
+  const github =
+  document.getElementById("github").value;
+
+  const demo =
+  document.getElementById("demo").value;
 
   const projects =
-    getProjects();
+  getProjects();
 
   projects.push({
     title,
-    desc
+    desc,
+    tech,
+    image,
+    github,
+    demo
   });
 
   saveProjects(projects);
 
   renderProjects();
-
 }
-
 function deleteProject(index) {
 
   const projects =
