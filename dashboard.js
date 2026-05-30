@@ -111,12 +111,23 @@ function renderProjects() {
     ${project.tech}
   </p>
 
+  <div class="d-flex gap-2">
+
+  <button
+    class="btn btn-warning"
+    onclick="editProject(${index})"
+  >
+    Edit
+  </button>
+
   <button
     class="btn btn-danger"
     onclick="deleteProject(${index})"
   >
     Delete
   </button>
+
+</div>
 
 </div>
 `;
