@@ -181,8 +181,8 @@ body{
   );
 
   animation:
-  drawCircle 5s linear forwards,
-  glowCircle 2s ease-in-out infinite;
+  drawCircle 1.2s linear forwards,
+  glowCircle 1.2s ease-in-out infinite;
 }
 
 /* DRAW */
