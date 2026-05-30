@@ -105,7 +105,14 @@ React.useState(true);
               Contact
             </a>
           </li>
-
+          <li class="nav-item">
+  <a
+    class="nav-link"
+    href="dashboard.html"
+  >
+    Dashboard
+  </a>
+</li>
         </ul>
         
       </div>
