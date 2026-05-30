@@ -334,16 +334,45 @@ function Projects() {
 
             <div className="project-card">
 
-              <h3>{project.title}</h3>
+  <img
+    src={project.image}
+    alt={project.title}
+    className="project-image"
+  />
 
-              <p className="text-secondary">
+  <h3>
+    {project.title}
+  </h3>
 
-                {project.desc}
+  <p>
+    {project.desc}
+  </p>
 
-              </p>
+  <p className="text-info">
+    {project.tech}
+  </p>
 
-            </div>
+  <div className="d-flex gap-2">
 
+    <a
+      href={project.github}
+      target="_blank"
+      className="btn btn-info"
+    >
+      GitHub
+    </a>
+
+    <a
+      href={project.demo}
+      target="_blank"
+      className="btn btn-outline-light"
+    >
+      Live Demo
+    </a>
+
+  </div>
+
+</div>
           </div>
 
         ))}
