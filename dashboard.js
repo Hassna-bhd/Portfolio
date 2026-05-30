@@ -54,18 +54,65 @@ function addProject(){
   const projects =
   getProjects();
 
-  projects.push({
+  const project = {
     title,
     desc,
     tech,
     image,
     github,
     demo
-  });
+  };
+
+  if(editIndex !== null){
+
+    projects[editIndex] =
+    project;
+
+    editIndex = null;
+
+  }else{
+
+    projects.push(project);
+
+  }
 
   saveProjects(projects);
 
+  clearForm();
+
   renderProjects();
+}
+  saveProjects(projects);
+
+  renderProjects();
+}
+function editProject(index){
+
+  const projects =
+  getProjects();
+
+  const project =
+  projects[index];
+
+  document.getElementById("title").value =
+  project.title;
+
+  document.getElementById("desc").value =
+  project.desc;
+
+  document.getElementById("tech").value =
+  project.tech;
+
+  document.getElementById("image").value =
+  project.image;
+
+  document.getElementById("github").value =
+  project.github;
+
+  document.getElementById("demo").value =
+  project.demo;
+
+  editIndex = index;
 }
 function deleteProject(index) {
 
@@ -79,7 +126,21 @@ function deleteProject(index) {
   renderProjects();
 
 }
+function clearForm(){
 
+  document.getElementById("title").value = "";
+
+  document.getElementById("desc").value = "";
+
+  document.getElementById("tech").value = "";
+
+  document.getElementById("image").value = "";
+
+  document.getElementById("github").value = "";
+
+  document.getElementById("demo").value = "";
+
+}
 function renderProjects() {
 
   const container =
