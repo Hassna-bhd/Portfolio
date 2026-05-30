@@ -87,26 +87,39 @@ function renderProjects() {
   const projects =
     getProjects();
 
-  container.innerHTML = "";
+  container.innerHTML += `
 
-  projects.forEach((project, index) => {
+<div class="card p-3 mb-3">
 
-    container.innerHTML += `
-      <div class="card mb-3 p-3">
+  <img
+    src="${project.image}"
+    style="
+      width:100%;
+      max-height:200px;
+      object-fit:cover;
+    "
+  >
 
-        <h4>${project.title}</h4>
+  <h4 class="mt-3">
+    ${project.title}
+  </h4>
 
-        <p>${project.desc}</p>
+  <p>${project.desc}</p>
 
-        <button
-          class="btn btn-danger"
-          onclick="deleteProject(${index})"
-        >
-          Delete
-        </button>
+  <p>
+    <strong>Tech:</strong>
+    ${project.tech}
+  </p>
 
-      </div>
-    `;
+  <button
+    class="btn btn-danger"
+    onclick="deleteProject(${index})"
+  >
+    Delete
+  </button>
+
+</div>
+`;
 
   });
 
