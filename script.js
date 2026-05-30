@@ -312,25 +312,7 @@ function Skills() {
 
 function Projects() {
 
-  const projects = [
-
-    {
-      title: "Modern Dashboard",
-      desc: "Responsive admin dashboard."
-    },
-
-    {
-      title: "Portfolio Website",
-      desc: "Modern animated portfolio."
-    },
-
-    {
-      title: "E-Commerce App",
-      desc: "React online store UI."
-    }
-
-  ];
-
+  const projects = JSON.parse( localStorage.getItem("projects") ) || [];
   return (
 
     <section
