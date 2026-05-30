@@ -12,7 +12,15 @@ function getProjects() {
   ) || [];
 
 }
+const projects =
+JSON.parse(
+  localStorage.getItem("projects")
+) || [];
 
+document.getElementById(
+  "totalProjects"
+).innerText =
+projects.length;
 function saveProjects(projects) {
 
   localStorage.setItem(
