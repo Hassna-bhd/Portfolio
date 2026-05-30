@@ -81,10 +81,7 @@ function addProject(){
   clearForm();
 
   renderProjects();
-}
-  saveProjects(projects);
 
-  renderProjects();
 }
 function editProject(index){
 
@@ -149,7 +146,11 @@ function renderProjects() {
   const projects =
     getProjects();
 
-  container.innerHTML += `
+  container.innerHTML = "";
+
+  projects.forEach((project, index) => {
+
+    container.innerHTML += `
 
 <div class="card p-3 mb-3">
 
@@ -175,29 +176,29 @@ function renderProjects() {
 
   <div class="d-flex gap-2">
 
-  <button
-    class="btn btn-warning"
-    onclick="editProject(${index})"
-  >
-    Edit
-  </button>
+    <button
+      class="btn btn-warning"
+      onclick="editProject(${index})"
+    >
+      Edit
+    </button>
 
-  <button
-    class="btn btn-danger"
-    onclick="deleteProject(${index})"
-  >
-    Delete
-  </button>
+    <button
+      class="btn btn-danger"
+      onclick="deleteProject(${index})"
+    >
+      Delete
+    </button>
+
+  </div>
 
 </div>
 
-</div>
 `;
 
   });
 
-}
-function logout(){
+}function logout(){
 
   localStorage.removeItem(
     "isAdmin"
