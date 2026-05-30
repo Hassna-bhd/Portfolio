@@ -1,3 +1,10 @@
+if(
+  localStorage.getItem("isAdmin")
+  !== "true"
+){
+  window.location.href =
+    "login.html";
+}
 function getProjects() {
 
   return JSON.parse(
