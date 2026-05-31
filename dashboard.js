@@ -110,6 +110,12 @@ function editProject(index){
   project.demo;
 
   editIndex = index;
+  document
+    .getElementById("title")
+    .scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
 }
 function deleteProject(index) {
 
@@ -145,7 +151,7 @@ function renderProjects() {
 
   const projects =
     getProjects();
-
+  document.getElementById("totalProjects").innerText = projects.length;  
   container.innerHTML = "";
 
   projects.forEach((project, index) => {
