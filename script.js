@@ -152,9 +152,9 @@ function Hero() {
 
         <div className="col-lg-6">
 
-          <p className="text-info">
+          <h1 className="text-info">
             Hi !,
-          </p>
+          </h1>
 
 
           <p
@@ -165,8 +165,6 @@ function Hero() {
             "
           >
 I'm a passionate Front-End Developer focused on building modern, responsive, and user-friendly web applications. I enjoy transforming ideas into interactive digital experiences using HTML, CSS, JavaScript, React, and Bootstrap.
-
-My goal is to continuously improve my skills, create high-quality projects, and deliver clean, efficient, and maintainable code. I am always eager to learn new technologies and take on exciting challenges that help me grow as a developer.
 
 
           </p>
