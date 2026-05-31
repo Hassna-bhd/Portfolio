@@ -103,7 +103,9 @@ body{
 }
 
 .stats-card{
-  width:220px;
+  width:120px;
+   height:120px;
+   margin: auto;
   border-radius:20px;
 }
 /* =========================
