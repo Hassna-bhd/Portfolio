@@ -98,7 +98,14 @@ body{
   animation:
   floatLogo 4s ease-in-out infinite;
 }
+.stats-container{
+  display:inline-block;
+}
 
+.stats-card{
+  width:220px;
+  border-radius:20px;
+}
 /* =========================
    IMAGE
 ========================= */
