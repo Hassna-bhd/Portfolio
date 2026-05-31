@@ -32,7 +32,8 @@ function saveProjects(projects) {
 }
 
 function addProject(){
-
+  document.getElementById("saveBtn").innerText =
+  "Save Project";
   const title =
   document.getElementById("title").value;
 
@@ -108,7 +109,8 @@ function editProject(index){
 
   document.getElementById("demo").value =
   project.demo;
-
+  document.getElementById("saveBtn").innerText =
+  "Update Project";
   editIndex = index;
   document
     .getElementById("title")
