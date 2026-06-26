@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Random Quote Machine",
+    "desc": "A modern random quote generator built with React. It displays inspirational quotes and allows users to generate new quotes instantly with a clean and responsive interface.",
+    "tech": "React, JavaScript, CSS, HTML, API",
+    "image": "./images/RandomQuoteMachine.PNG",
+    "github": "https://github.com/Hassna-bhd/RandomQuoteMachine",
+    "demo": "https://hassna-bhd.github.io/RandomQuoteMachine/"
+  },
+  {
+    "title": "Markdown Previewer",
+    "desc": "A real-time Markdown editor and previewer built with React. Users can write Markdown syntax and instantly see the rendered output.",
+    "tech": "React, JavaScript, HTML, CSS",
+    "image": "./images/MarkdownPreviewer.PNG",
+    "github": "https://github.com/Hassna-bhd/markdown-previewer",
+    "demo": "https://hassna-bhd.github.io/markdown-previewer/"
+  },
+  {
+    "title": "JavaScript Calculator",
+    "desc": "A fully functional calculator supporting basic arithmetic operations, decimals, and responsive design.",
+    "tech": "React, JavaScript, CSS",
+    "image": "./images/JavascriptCalculator.PNG",
+    "github": "https://github.com/Hassna-bhd/JavascriptCalculator",
+    "demo": "https://hassna-bhd.github.io/JavascriptCalculator/"
+  },
+  {
+    "title": "25 + 5 Clock",
+    "desc": "A Pomodoro productivity timer with customizable session and break lengths, built using React.",
+    "tech": "React, JavaScript, CSS",
+    "image": "./images/25+5Clock.PNG",
+    "github": "https://github.com/Hassna-bhd/25-5Clock",
+    "demo": "https://hassna-bhd.github.io/25-5Clock/"
+  },
+  {
+    "title": "Drum Machine",
+    "desc": "Interactive drum machine that plays sounds through keyboard keys and mouse clicks with responsive UI.",
+    "tech": "React, JavaScript, HTML, CSS",
+    "image": "./images/DrumMachine.PNG",
+    "github": "https://github.com/Hassna-bhd/DrumMachine",
+    "demo": "https://hassna-bhd.github.io/DrumMachine/"
+  },
+  {
+    "title": "Blog Website",
+    "desc": "Developed and customized a Blogger website with a responsive interface, fixed navigation bar, SEO enhancements, and optimized user experience across devices.",
+    "tech": "Blogger",
+    "image": "./images/blogger.PNG",
+    "github": "https://github.com/Hassna-bhd/blogger",
+    "demo": "https://healthsciencehealth.blogspot.com/"
+  }
+]
