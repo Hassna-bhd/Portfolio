@@ -3,7 +3,7 @@ const { useState, useEffect } = React;
 /* LOADER */
 function Loader() {
   return React.createElement("div", { className: "lux-loader" },
-    React.createElement("div", { className: "circle-loader" }),
+    React.createElement("div", { className: "loader-ring" }),
     React.createElement("div", { className: "logo-wrapper" },
       React.createElement("img", {
         src: "./images/Logo.png",
