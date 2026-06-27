@@ -129,7 +129,8 @@ function Navbar({ darkMode, setDarkMode }) {
     )
   );
 }
-/* HERO */function Hero() {
+/* HERO */
+function Hero() {
   return React.createElement(
     "section",
     { id: "hero", className: "hero-section container" },
@@ -253,10 +254,31 @@ function Projects({ projects }) {
             React.createElement("p", { className: "text-info" }, p.tech),
 
             React.createElement(
-              "a",
-              { href: p.github, className: "btn btn-info", target: "_blank" },
-              "GitHub"
-            )
+  "div",
+  { className: "d-flex gap-2" },
+
+  React.createElement(
+    "a",
+    {
+      href: p.demo,
+      className: "btn btn-outline-light",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    },
+    "Live Demo"
+  ),
+
+  React.createElement(
+    "a",
+    {
+      href: p.github,
+      className: "btn btn-info",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    },
+    "GitHub"
+  )
+)
           )
         )
       )
