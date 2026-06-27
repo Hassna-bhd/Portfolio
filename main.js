@@ -159,7 +159,6 @@ function Hero() {
           "I build modern, responsive and user-friendly web applications using React, JavaScript and modern web technologies."
         ),
 
-        // ✅ AJOUT ICI : HERO STATS
         React.createElement(
           "div",
           { className: "hero-stats mt-5" },
@@ -189,16 +188,16 @@ function Hero() {
 
       // RIGHT
       React.createElement(
-        "div",
-        {
-          className: "col-lg-6 order-1 order-lg-2 text-center hero-img-wrapper"
-        },
+  "div",
+  {
+    className: "col-lg-6 order-1 order-lg-2 d-flex justify-content-center align-items-center"
+  },
 
-        React.createElement("img", {
-          src: "./images/Logo.png",
-          className: "hero-logo"
-        })
-      )
+  React.createElement("img", {
+    src: "./images/Logo.png",
+    className: "hero-logo"
+  })
+)
     )
   );
 }/* SKILLS */
