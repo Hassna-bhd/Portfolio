@@ -110,7 +110,7 @@ function App() {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    fetch("https://https://portfolio-vite-virid-xi.vercel.app/api/projects")
+    fetch("https://portfolio-vite-virid-xi.vercel.app/api/projects")
       .then(res => res.json())
       .then(data => setProjects(data));
   }, []);
