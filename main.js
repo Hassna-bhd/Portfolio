@@ -50,17 +50,45 @@ function Skills() {
 
 /* PROJECTS */
 function Projects({ projects }) {
-  return React.createElement("section", { id: "projects", className: "container" },
+  return React.createElement(
+    "section",
+    { id: "projects", className: "container py-5" },
+
     React.createElement("h2", null, "Projects"),
 
-    projects.map((p, i) =>
-      React.createElement("div", { key: i },
-        React.createElement("h3", null, p.title)
+    React.createElement(
+      "div",
+      { className: "row g-4" },
+
+      projects.map((p, i) =>
+        React.createElement(
+          "div",
+          { className: "col-lg-4", key: i },
+
+          React.createElement(
+            "div",
+            { className: "project-card" },
+
+            React.createElement("img", {
+              src: p.image,
+              className: "project-image"
+            }),
+
+            React.createElement("h3", null, p.title),
+            React.createElement("p", null, p.desc),
+            React.createElement("p", { className: "text-info" }, p.tech),
+
+            React.createElement(
+              "a",
+              { href: p.github, className: "btn btn-info", target: "_blank" },
+              "GitHub"
+            )
+          )
+        )
       )
     )
   );
 }
-
 /* CONTACT */
 function Contact() {
   return React.createElement("section", { className: "container" },
@@ -77,24 +105,24 @@ function Footer() {
 
 /* APP */
 function App() {
+  const [projects, setProjects] = React.useState([]);
+  const [darkMode, setDarkMode] = React.useState(true);
+  const [loading, setLoading] = React.useState(true);
 
-  const [projects, setProjects] = useState([]);
-  const [darkMode, setDarkMode] = useState(true);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("https://portfolio-vite-virid-xi.vercel.app/api/projects")
+  React.useEffect(() => {
+    fetch("https://https://portfolio-vite-virid-xi.vercel.app/api/projects")
       .then(res => res.json())
       .then(data => setProjects(data));
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+  React.useEffect(() => {
+    setTimeout(() => setLoading(false), 1500);
   }, []);
 
   if (loading) return React.createElement(Loader);
 
-  return React.createElement("div",
+  return React.createElement(
+    "div",
     { className: darkMode ? "dark-theme" : "light-theme" },
 
     React.createElement(Navbar, { darkMode, setDarkMode }),
@@ -105,6 +133,5 @@ function App() {
     React.createElement(Footer)
   );
 }
-
 ReactDOM.createRoot(document.getElementById("root"))
   .render(React.createElement(App));
