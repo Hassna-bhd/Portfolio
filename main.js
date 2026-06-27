@@ -83,7 +83,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/projects")
+    fetch("https://portfolio-vite-virid-xi.vercel.app/api/projects")
       .then(res => res.json())
       .then(data => setProjects(data));
   }, []);
