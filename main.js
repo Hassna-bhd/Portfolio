@@ -261,7 +261,7 @@ function Projects({ projects }) {
     "section",
     { id: "projects", className: "container py-5" },
 
-    React.createElement("h2", null, "Projects"),
+    React.createElement("h2",  { className: "section-title" }, "Projects"),
 
     React.createElement(
       "div",
