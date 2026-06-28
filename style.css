@@ -268,7 +268,7 @@ body{
 .stat-item span{
   color:#94a3b8;
 }
-.hero-logo-wrapper{
+.hero-logo-wrapper {
   position:relative;
   display:flex;
   justify-content:center;
@@ -276,6 +276,15 @@ body{
   width:500px;
   height:500px;
   margin:auto;
+}
+.hero-section .row {
+  width: 100%;
+  align-items: center;
+}
+
+.hero-section .col-lg-6:last-child {
+  display: flex;
+  justify-content: flex-end;
 }
 .hero-logo{
   box-shadow:
