@@ -46,6 +46,10 @@ body{
         0 0 30px rgba(56,189,248,.55),
         0 0 70px rgba(139,92,246,.45);
 }
+@keyframes rotateRing{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
 .hero-logo-wrapper{
     position:relative;
     width:380px;
