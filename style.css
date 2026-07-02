@@ -33,6 +33,28 @@ body{
   animation:
   floatLogo 4s ease-in-out infinite;
 }
+.logo-ring{
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    border:6px solid rgba(56,189,248,.35);
+    z-index:1;
+    animation:rotateRing 15s linear infinite;
+
+    box-shadow:
+        0 0 30px rgba(56,189,248,.55),
+        0 0 70px rgba(139,92,246,.45);
+}
+.hero-logo-wrapper{
+    position:relative;
+    width:380px;
+    height:380px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+}
 .logo-image{
   width:100px;
   height:100px;
@@ -202,15 +224,16 @@ body{
   justify-content: flex-end;
 }
 .hero-logo{
-  box-shadow:
-    0 0 40px rgba(56,189,248,.5),
-    0 0 80px rgba(139,92,246,.5);
-  animation:floatHero 5s ease-in-out infinite;
-  width:320px;
-  height:320px;
-  object-fit:cover;
+  width:280px;
+  height:280px;
   border-radius:50%;
+  object-fit:cover;
+  position:relative;
   z-index:2;
+  animation:floatHero 5s ease-in-out infinite;
+  box-shadow:
+        0 0 35px rgba(56,189,248,.45),
+        0 0 70px rgba(139,92,246,.35);
 }
 @keyframes flyNavbar{
   0%{
