@@ -208,20 +208,27 @@ function Hero() {
       ),
 
       // RIGHT
-      React.createElement(
+React.createElement(
   "div",
   {
     className: "col-lg-6 order-1 order-lg-2 d-flex justify-content-center align-items-center"
   },
 
-  React.createElement("img", {
-    src: "./images/Logo.png",
-    className: "hero-logo"
-  })
-)
-    )
-  );
-}/* SKILLS */
+  React.createElement(
+    "div",
+    { className: "hero-logo-wrapper" },
+
+    React.createElement("div", {
+      className: "logo-ring"
+    }),
+
+    React.createElement("img", {
+      src: "./images/Logo.png",
+      className: "hero-logo"
+    })
+  )
+)}
+/* SKILLS */
 function Skills() {
 
   const skills = [
